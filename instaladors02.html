@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Prototipo Interficie Instaladores01 - Jaume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+.inputstl { 
+    padding: 4px; 
+    border: solid 1px #d3d3d3; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #C6ECFF), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #C6ECFF 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+
+    }
+
+    select > option{padding: 4px; border-bottom: 1px dashed #d3d3d3}
+   
+</style>
+  
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <h1>Equipos descalcificadores <small>aplicativo cálculo de equipos descalcificadores</small></h1>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <h2>Datos entrada</h2>
+    <form>
+
+    <div class="form-group">
+    <label>Selecciona equipo:</label>
+    <select id="equipo" class="form-control inputstl" data-style="btn-primary">
+      <option value="essential8">ESSENTIAL 8</option>
+      <option value="essential11">ESSENTIAL 11</option>
+      <option value="essential17">ESSENTIAL 17</option>
+    </select>
+    </div>
+
+      <div class="form-group">
+      <label for="dureza">Selecciona la dureza del agua:</label>
+      <select id="dureza" class="form-control inputstl" >
+        <option value ="5">5ºHF Dureza muy baja</option>
+        <option value ="10">10ºHF Dureza baja</option>
+        <option value ="15">15ºHF Dureza baja</option>
+        <option value ="20">20ºHF Dureza moderada</option>
+        <option value ="25">25ºHF Dureza moderada</option>
+        <option value ="30">30ºHF Dureza moderada</option>
+        <option value ="35">35ºHF Dureza alta</option>
+        <option value ="40">40ºHF Dureza alta</option>
+        <option value ="45">45ºHF Dureza alta</option>
+        <option value ="50">50ºHF Dureza muy alta</option>
+        <option value ="55">55ºHF Dureza muy alta</option>
+        <option value ="60">60ºHF Dureza muy alta</option>
+        <option value ="65">65ºHF Dureza muy alta</option>
+        <option value ="70">70ºHF Dureza muy alta</option>
+        <option value ="75">75ºHF Dureza muy alta</option>
+        <option value ="80">80ºHF Dureza extrema</option>
+        <option value ="85">85ºHF Dureza extrema</option>
+        <option value ="90">90ºHF Dureza extrema</option>
+        <option value ="95">95ºHF Dureza extrema</option>
+      </select>
+    </div>
+    <hr>
+    <button type="button" title="Muestra el equipo más adecuado" class="btn btn-primary" onclick="evaluarResultats()">Mostrar equipo</button>
+</form>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="panel panel-default">
+<div class="panel-body">
+
+<h2>Usted debe programar:</h2>
+
+    <img id="imatge" src="img/choose.png" alt="Imagen de la configuración" class="img-responsive">
+
+    <p>Equipo: <span id="mostraEquipo"></span></p>
+    <p>Dureza: <span id="mostraDureza"></span></p>
+    <hr>
+    <div id="error" class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+<hr>
+
+    <script src="instaladors02.js"></script>
+</body>
+</html>
